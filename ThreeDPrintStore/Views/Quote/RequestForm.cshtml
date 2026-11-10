@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Request a Quote";
+}
+
+<h1>Request a Quote</h1>
+
+<form asp-controller="Quote" asp-action="Submit" method="post"
+      enctype="multipart/form-data">
+
+    <div>
+        <label>Name</label>
+        <input type="text" name="CustomerName" required />
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input type="email" name="CustomerEmail" required />
+    </div>
+
+    <div>
+        <label>Project Description</label>
+        <textarea name="ProjectDescription"></textarea>
+    </div>
+
+    <div>
+        <label>Material</label>
+        <select name="MaterialType">
+            <option>PLA</option>
+            <option>PETG</option>
+            <option>ABS</option>
+            <option>TPU</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Colors Needed</label>
+        <input type="number" name="RequestedColorsCount" min="1" value="1" />
+    </div>
+
+    <div>
+        <label>Upload STLtton type="submit">Request Quote</button>
+
+</form>
